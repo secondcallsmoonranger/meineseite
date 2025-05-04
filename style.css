@@ -62,3 +62,15 @@ img {
   border: 5px solid;
   border-image: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet) 1;
 }
+.footer-link {
+  position: fixed;      /* Stick to screen even on scroll */
+  bottom: 20px;         /* 20px from the bottom */
+  left: 50%;            /* Move to center horizontally... */
+  transform: translateX(-50%);  /* ...and actually center it */
+  text-align: center;
+}
+
+.footer-link img {
+  width: 100px;         /* Shrinks the image */
+  height: auto;         /* Keeps aspect ratio */
+}

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+<!DOCTYPE html>
+<html>
 <head>
     <title>My First Website</title>
     <link rel="stylesheet" href="style.css">
@@ -18,19 +20,42 @@
         <img src="fire.gif" alt="Fire" class="gif-sound">
     </div>
 
-    <!-- No visible audio element needed -->
+  </a>
+</div>
+
+<div class="footer-link">
+  <a href="about.html">
+    <img src="gnade.gif" alt="About Page">
+
+   <audio controls loop>
+  <source src="Korn.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
 
     <script>
-        // Select all images with the 'gif-sound' class
+        // Trigger a sound effect on each hover
         const gifImages = document.querySelectorAll('.gif-sound');
 
         gifImages.forEach(img => {
             img.addEventListener('mouseenter', () => {
-                const sound = new Audio('BadToTheBone.wav'); // use .wav (not .wave)
+                const sound = new Audio('BadToTheBone.wav'); // must match file name
                 sound.volume = 1.0;
                 sound.play();
             });
         });
+
+        // Start background music once on first mouse move
+        const music = document.getElementById('bgmusic');
+        let musicStarted = false;
+
+        function startMusic() {
+            if (!musicStarted) {
+                music.play().catch(err => console.log("Autoplay failed:", err));
+                musicStarted = true;
+            }
+        }
+
+        document.addEventListener('mousemove', startMusic);
     </script>
 
 </body>
