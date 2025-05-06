@@ -1,0 +1,16 @@
+# VSCode settings
+.vscode/
+
+# OS junk
+Thumbs.db
+Desktop.ini
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Node
+node_modules/
+
+# Ignore everything in AppData just in case
+AppData/
